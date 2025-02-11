@@ -1,0 +1,10 @@
+all: main.exe
+
+main.exe: main.c quadraticroots.o
+	gcc main.c quadraticroots.o -lm -o main.exe 
+
+quadraticroots.o: quadraticroots.c quadraticroots.h
+	gcc quadraticroots.c -c -o quadraticroots.o
+
+clean:
+	del *.exe *.o

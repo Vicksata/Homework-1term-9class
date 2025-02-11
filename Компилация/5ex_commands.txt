@@ -1,0 +1,3 @@
+gcc maths.c -c -o maths.o
+ar rcs libmaths.a maths.o
+gcc 5ex.c -L./ -lmaths -o 5ex.exe
